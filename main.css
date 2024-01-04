@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Roboto', 'sans-serif+';
+}
+
+.container{
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h2{
+    color: #1635c0;;
+}
+
+header{
+    position: sticky;/*faz com que o elemento escolhido se mova com a página*/
+    top: 0;
+    left: 0;
+}
+
+header h1{
+    font-style: italic;
+}
+
+header, footer {
+    background-color: #1635c0;
+    color: #fff;
+}
+
+header .container,
+footer .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    padding: 16px 0;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav li a{
+    color: #fff;
+    text-decoration: none; /*Tira o aspecto de link*/
+}
+
+#sobre-a-loja h2{
+    margin-top: 15px;
+}
+
+#sobre-a-loja img{
+    max-width: 400px;
+    margin-right: 24px;
+}
+
+section{
+    padding: 48px 0;
+}
+
+section hr{
+    margin-bottom: 16px;
+}
+
+.lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 24.25%);
+    column-gap: 1%;
+}
+
+.lista-produtos li{
+    list-style: none;
+}
+
+.lista-produtos img{
+    width: 100%;
+}
+
+.lista-produtos li h3,
+.lista-produtos li p{
+    margin: 12px 0;
+}
+
+button{
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #1635c0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 25px;
+}
+
+footer{
+    text-align: center;
+}
+
+footer li {
+    list-style: none;
+    margin-left: 16px;
+}
+
+footer li img{
+    height: 32px;
+}
+
+@media screen and (min-width: 1024px){
+    .container-flex{
+        display: flex;
+    } 
+}
+
+@media screen and (min-width: 641px) and (max-width:  1023px){
+    .container{
+        max-width: 90%;
+    }
+    .lista-produtos {
+        grid-template-columns: repeat(2, 45%);
+        column-gap: 10%;
+    }
+    
+}
+
+@media screen and (max-width: 640px){
+    .container{
+        max-width: 90%;
+    }
+
+    .lista-produtos {
+        grid-template-columns: repeat(1, 100%);
+    }
+}
